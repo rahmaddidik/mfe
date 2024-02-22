@@ -11,6 +11,7 @@ export default ({ onSignIn }) => {
       initialPath: history.location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
         const { pathname } = history.location;
+
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
@@ -19,7 +20,7 @@ export default ({ onSignIn }) => {
     });
 
     history.listen(onParentNavigate);
-  }, [history]);
+  }, []);
 
   return <div ref={ref} />;
 };
