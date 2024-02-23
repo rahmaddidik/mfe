@@ -8,5 +8,9 @@ export default () => {
     mount(ref.current);
   }, []);
 
-  return <div ref={ref} />;
+  return (
+    <div style={{ padding: 24 }}>
+      <div ref={ref} />
+    </div>
+  );
 };
